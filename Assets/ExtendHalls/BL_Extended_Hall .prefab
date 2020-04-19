@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2955298738021431937}
   m_Layer: 0
-  m_Name: LB_Extended_Hall
+  m_Name: 'BL_Extended_Hall '
   m_TagString: Hall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -966,12 +966,12 @@ PrefabInstance:
     - target: {fileID: 56775542658109374, guid: 9a669d36a1f89ca4e9672e7f07d38872,
         type: 3}
       propertyPath: openingDirection
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 293953604365835858, guid: 9a669d36a1f89ca4e9672e7f07d38872,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 293953604365835858, guid: 9a669d36a1f89ca4e9672e7f07d38872,
         type: 3}
@@ -981,7 +981,7 @@ PrefabInstance:
     - target: {fileID: 293953604365835858, guid: 9a669d36a1f89ca4e9672e7f07d38872,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 293953604365835858, guid: 9a669d36a1f89ca4e9672e7f07d38872,
         type: 3}
