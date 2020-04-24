@@ -10,6 +10,7 @@ TagManager:
   - Hall
   - RoomsHalls
   - SpawnPoint
+  - Item
   layers:
   - Default
   - TransparentFX
