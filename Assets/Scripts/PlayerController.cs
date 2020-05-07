@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour{
 	
-	Vector3 up = Vector3.zero,
-	right = new Vector3(0, 90, 0),
-	down = new Vector3(0, 180, 0),
-	left = new Vector3(0, 270, 0),
-	currentDirection = Vector3.zero;
+	Vector3	up = Vector3.zero,
+			right = new Vector3(0, 90, 0),
+			down = new Vector3(0, 180, 0),
+			left = new Vector3(0, 270, 0),
+			currentDirection = Vector3.zero;
 	
 	Vector3 nextPos, destination, direction;
 	
@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour{
 	
     // Start is called before the first frame update
     void Start(){
+		
         currentDirection = up;
 		nextPos = Vector3.forward;
 		destination = transform.position;
@@ -26,7 +27,7 @@ public class PlayerController : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
-       Move();
+       Move(); 
     }
 	
 	// Player Movement
@@ -78,6 +79,26 @@ public class PlayerController : MonoBehaviour{
 			}
 		}
 		
+		// Holding down right shift and the direction key will let player move multiple spaces
+		if(Input.GetKey(KeyCode.RightShift)){
+			canMove = true;
+			if(Input.GetKey(KeyCode.W)){
+				nextPos = Vector3.forward;
+				currentDirection = up;
+			}else if (Input.GetKey(KeyCode.S)){
+				nextPos = Vector3.back;
+				currentDirection = down;
+			}else if (Input.GetKey(KeyCode.D)){
+				nextPos = Vector3.right;
+				currentDirection = right;
+			}else if (Input.GetKey(KeyCode.A)){
+				nextPos = Vector3.left;
+				currentDirection = left;
+			}else{
+				canMove = false;
+			}
+		}
+		
 		// rotates player
 		if(Vector3.Distance(destination, transform.position) <= 0.00001f){
 			transform.localEulerAngles = currentDirection;
@@ -108,11 +129,12 @@ public class PlayerController : MonoBehaviour{
 		return true;
 	}
 	
+	// Used for collection
 	void OnTriggerEnter(Collider other){
 		if(other.gameObject.CompareTag("Item")){
 			other.gameObject.SetActive(false);
-			
-			
 		}
 	}
+	
+	
 }
