@@ -5,8 +5,10 @@ using UnityEngine;
 public class Combat : MonoBehaviour{
 	
 	public Transform attackPoint;
-	public float attackRange = 0.25f;
 	public LayerMask monsterLayers;
+	
+	public float attackRange = 0.25f;
+	public int attackDamage;
 	
 	
     // Start is called before the first frame update
@@ -16,6 +18,8 @@ public class Combat : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
+		attackDamage = 5;
+		
         // Attack
 	   if(Input.GetKeyDown(KeyCode.Return)){
 		   Attack();
@@ -28,7 +32,8 @@ public class Combat : MonoBehaviour{
 		Collider[] hitMonsters = Physics.OverlapSphere(attackPoint.position, attackRange, monsterLayers);
 		// Damage
 		foreach(Collider monster in hitMonsters){
-			Debug.Log("We hit " + monster.name);
+			monster.GetComponent<Monster>().TakeDamage(attackDamage);
+			//Debug.Log("We hit " + monster.name);
 		}
 	}
 	

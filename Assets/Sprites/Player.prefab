@@ -881,10 +881,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 8403013910179876995}
-  attackRange: 0
   monsterLayers:
     serializedVersion: 2
     m_Bits: 512
+  attackRange: 0.5
+  attackDamage: 5
 --- !u!1 &2777399841785974140
 GameObject:
   m_ObjectHideFlags: 0

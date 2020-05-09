@@ -1043,9 +1043,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2777399841684268632}
   - component: {fileID: 6245904200253490595}
-  - component: {fileID: 4066448196474425209}
-  - component: {fileID: 9144902706937425066}
-  - component: {fileID: 818275831494746507}
+  - component: {fileID: 8254399051837048636}
   m_Layer: 9
   m_Name: Troll
   m_TagString: Monster
@@ -1081,23 +1079,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &4066448196474425209
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2777399841684268615}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &9144902706937425066
+--- !u!114 &8254399051837048636
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1106,36 +1088,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2777399841684268615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4861907f9e6cd24c88bd3a1e9f78fe3, type: 3}
+  m_Script: {fileID: 11500000, guid: 7365f82ece20c9442832ebbd671925d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 0
---- !u!114 &818275831494746507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2777399841684268615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2cc267193b706a4a9a2f24dc68df07a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy:
-    name: Troll
-    EnemyElement: 0
-    rarity: 0
-    baseHP: 10
-    curHP: 10
-    baseATK: 5
-    curATK: 5
-    baseMAG: 3
-    curMAG: 3
-    baseDEF: 5
-    curDEF: 5
-    baseMDF: 3
-    curMDF: 3
+  EnemyElement: 0
+  rarity: 0
+  name: Troll
+  maxHP: 10
+  currentHP: 0
+  ATK: 5
+  MAG: 3
+  DEF: 5
+  MDF: 3
 --- !u!1 &2777399841785974140
 GameObject:
   m_ObjectHideFlags: 0
